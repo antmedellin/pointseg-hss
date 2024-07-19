@@ -1,0 +1,52 @@
+{
+
+    "image" : "pointseg_hss",
+
+    // this is similar to the docker compose file which can be used instead with: docker compose up
+
+    "mounts":[
+        // "source=${localWorkspaceFolder}/../../HyperWorkspace/HyperImages/LIB-HSI,target=/workspaces/LIB-HSI,type=bind,consistency=cached"
+    ],
+
+    "runArgs":[
+
+        "--gpus=all",
+        "-e", "HOST_UID=$(id -u)",
+        "-e", "HOST_GID=$(id -g)",
+        "--shm-size=16g",
+        "--network=host"
+    ],
+
+    "customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+		  // Add the IDs of extensions you want installed when the container is created.
+		  "extensions": [
+			"ms-python.python",
+			"ms-azuretools.vscode-docker",
+			"streetsidesoftware.code-spell-checker",
+      "ms-toolsai.jupyter",
+      "GitHub.copilot",
+			],
+			
+		}
+	  },
+
+
+}
+
+
+//   bash mmsegmentation/tools/dist_train.sh mmsegmentation/experiments/libhsi/fcn_hr48_2xb2-20k_libhsi-512x512.py 1
+
+// python3 mmsegmentation/tools/psuedo_gen/libhsi.py 
+
+
+// bash tools/dist_train.sh experiments/libhsi/fcn_hr48_2xb2-20k_libhsi-512x512.py 1
+
+
+// export PYTHONPATH="/path/to/pointseg-hss:$PYTHONPATH" if needed 
+
+// need to use custom mmsegmentation rather than the one in the container 
+
+// pip install -e . # in the mmsegmentation folder
+// export to python path   export PYTHONPATH=".:$PYTHONPATH"

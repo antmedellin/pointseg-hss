@@ -24,7 +24,7 @@ def main():
     args = parser.parse_args()
 
     train_dataset = LIBHSIDataset(
-        data_root=os.path.join(args.data_root, "train"),
+        data_root=os.path.join("mmsegmentation",args.data_root, "train"),
         pipelines=[
             LoadENVIFromFile(),
             LoadRGBFromFile(),

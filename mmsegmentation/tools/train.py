@@ -101,4 +101,7 @@ def main():
 
 
 if __name__ == '__main__':
+    
+    from mmseg.datasets.libhsi import LIBHSIDataset
+    
     main()

@@ -11,7 +11,7 @@ import numpy as np
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, TensorDataset
 
-data_root = "data/LIB-HSI/train/"
+data_root = "mmsegmentation/data/LIB-HSI/train/"
 import torch
 from torch import nn
 
@@ -345,5 +345,8 @@ print(len(names))
 # for name in names:
 #     process(name)
 
-pool = multiprocessing.Pool(12)
+pool = multiprocessing.Pool(processes = 8) # this value may need to be changed based on the performance of your sstem 
+# each process requires 960 MiB of vRAM
 pool.map(process, names)
+pool.close()
+pool.join()
