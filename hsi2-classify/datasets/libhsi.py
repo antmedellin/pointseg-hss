@@ -36,8 +36,27 @@ class LIBHSIDataset(Dataset):
         "Concrete Window Sill",
         "Metal Profiled Door",
         "Wood/Timber Profiled Door",
+        "Unknown", # added this and below
+        "Wood Ground",
+        "Plastic Vent",
+        "Wood/timber Vent",
+        "Whiteboard",
+        "Chessboard",
+        "Tripod",
+        "Metal-Frame",
+        "Miscellaneous",
+        "Metal-Vent",
+        "Metal Door Knob/Handle",
+        "Plastic Flyscreen",
+        "Plastic Label",
+        "Metal Label",
+        "Metal Pipe",
+        "Metal Smooth Sheet",
+        "Plastic Pipe",
+        "Metal-Pole"
+        
     )
-    PALETTE = [
+    PALETTE = [ # in b,g,r format
         [16, 122, 0],
         [186, 174, 69],
         [78, 78, 212],
@@ -65,6 +84,25 @@ class LIBHSIDataset(Dataset):
         [74, 5, 187],
         [124, 134, 113],
         [150, 141, 201],
+        [0, 0, 0], # added this ane below
+        [96,170,65],
+        [124,233,236],
+        [22,128,237],
+        [189,197,199],
+        [173,212,240],
+        [145,195,2],
+        [195,84,80],
+        [181,42,181],
+        [40,117,184],
+        [171,174,167],
+        [134,152,108],
+        [26,196,189],
+        [128,0,255],
+        [228,49,32],
+        [64,128,255],
+        [228,204,212],
+        [194,98,33]
+        
     ]
 
     def __init__(

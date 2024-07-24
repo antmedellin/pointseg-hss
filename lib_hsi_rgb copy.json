@@ -1,0 +1,48 @@
+{
+    "items": [
+          
+        
+        {
+            "name": "Metal Label",
+            "class_group": 0,
+            "red_value": 255,
+            "green_value": 0,
+            "blue_value": 128
+        },
+        {
+            "name": "Metal Pipe",
+            "class_group": 0,
+            "red_value": 32,
+            "green_value": 49,
+            "blue_value": 228
+        },
+        
+        {
+            "name": "Metal Smooth Sheet",
+            "class_group": 0,
+            "red_value": 255,
+            "green_value": 128,
+            "blue_value": 64
+        },
+        
+        {
+            "name": "Plastic Pipe",
+            "class_group": 0,
+            "red_value": 212,
+            "green_value": 204,
+            "blue_value": 228
+        },
+        
+        {
+            "name": "Metal-Pole",
+            "class_group": 0,
+            "red_value": 33,
+            "green_value": 98,
+            "blue_value": 194
+        },
+        
+      
+       
+       
+    ]
+}

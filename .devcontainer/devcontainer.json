@@ -50,3 +50,103 @@
 
 // pip install -e . # in the mmsegmentation folder
 // export to python path   export PYTHONPATH=".:$PYTHONPATH"
+
+
+// python3 tools/test.py  experiments/libhsi/fcn_hr48_2xb2-20k_libhsi-512x512.py work_dirs/fcn_hr48_2xb2-20k_libhsi-512x512/iter_6000.pth --show-dir work_dirs/results/evaluation --show
+
+// +---------------------------+-------+-------+
+// |           Class           |  IoU  |  Acc  |
+// +---------------------------+-------+-------+
+// |      Vegetation Plant     | 75.25 | 83.14 |
+// |        Glass Window       | 78.98 | 93.08 |
+// |         Brick Wall        | 94.71 | 96.38 |
+// |      Concrete Ground      | 73.82 | 77.08 |
+// |         Block Wall        |  85.6 |  95.6 |
+// |       Concrete Wall       | 72.32 | 88.49 |
+// |      Concrete Footing     | 18.98 |  31.8 |
+// |       Concrete Beam       | 87.13 | 99.14 |
+// |        Brick Ground       | 58.32 | 62.25 |
+// |         Glass door        | 69.42 | 75.87 |
+// |     Vegetation Ground     | 12.13 | 14.76 |
+// |            Soil           | 44.75 | 58.42 |
+// |        Metal Sheet        |  10.9 | 13.62 |
+// |      Woodchip Ground      | 33.86 | 63.19 |
+// |  Wood/Timber Smooth Door  | 73.75 | 95.26 |
+// |        Tiles Ground       |  0.0  |  0.0  |
+// |    Pebble-Concrete Beam   | 88.55 | 95.24 |
+// |   Pebble-Concrete Ground  | 47.77 | 59.73 |
+// |    Pebble-Concrete Wall   |  0.0  |  nan  |
+// |    Metal Profiled Sheet   | 92.86 |  98.7 |
+// |        Door-plastic       |  0.0  |  nan  |
+// |      Wood/timber Wall     | 56.34 | 56.35 |
+// |         Wood Frame        | 41.91 |  61.6 |
+// |     Metal Smooth Door     | 37.08 | 43.85 |
+// |    Concrete Window Sill   | 66.03 | 74.81 |
+// |    Metal Profiled Door    | 65.09 | 69.06 |
+// | Wood/Timber Profiled Door | 66.11 | 99.92 |
+// +---------------------------+-------+-------+
+// 07/20 19:33:45 - mmengine - INFO - Iter(test) [75/75]    aAcc: 88.8000  mIoU: 53.7700  mAcc: 68.2900  data_time: 0.0407  time: 0.0935
+
+
+
+// python3 hsi2-classify/train_libhsi.py --model CNN_HSI --data_root data/LIB-HSI --work_dir workdir/
+
+//  python3 hsi2-classify/train_libhsi.py --model CNN_HSI --data_root data/LIB-HSI --work_dir workdir/ --batch_size=2
+
+
+// Exp name: fcn_hr48_2xb2-20k_libhsi-512x512_20240724_050015
+// 07/24 06:52:04 - mmengine - INFO - Iter(train) [20000/20000]  lr: 1.0000e-04  eta: 0:00:00  time: 0.3331  data_time: 0.0057  memory: 3554  loss: 0.0084  decode.loss_ce: 0.0084  decode.acc_seg: 99.6046
+// 07/24 06:52:04 - mmengine - INFO - Saving checkpoint at 20000 iterations
+// 07/24 06:52:08 - mmengine - INFO - Iter(val) [50/75]    eta: 0:00:01  time: 0.0526  data_time: 0.0016  memory: 1166  
+// 07/24 06:52:09 - mmengine - INFO - per class results:
+// 07/24 06:52:09 - mmengine - INFO - 
+// +---------------------------+-------+-------+
+// |           Class           |  IoU  |  Acc  |
+// +---------------------------+-------+-------+
+// |      Vegetation Plant     | 76.88 | 81.08 |
+// |        Glass Window       | 79.81 | 94.08 |
+// |         Brick Wall        | 95.07 |  96.6 |
+// |      Concrete Ground      | 69.96 | 76.77 |
+// |         Block Wall        | 86.41 | 96.42 |
+// |       Concrete Wall       | 76.14 | 89.11 |
+// |      Concrete Footing     | 29.53 | 52.53 |
+// |       Concrete Beam       | 63.41 | 99.65 |
+// |        Brick Ground       | 31.02 | 31.82 |
+// |         Glass door        | 67.94 | 72.23 |
+// |     Vegetation Ground     |  23.5 | 33.82 |
+// |            Soil           | 59.25 | 85.94 |
+// |        Metal Sheet        | 34.53 |  36.9 |
+// |      Woodchip Ground      | 52.89 | 63.93 |
+// |  Wood/Timber Smooth Door  |  74.5 | 94.18 |
+// |        Tiles Ground       |  0.0  |  0.0  |
+// |    Pebble-Concrete Beam   | 91.78 | 95.84 |
+// |   Pebble-Concrete Ground  |  0.0  |  0.0  |
+// |    Pebble-Concrete Wall   |  0.0  |  nan  |
+// |    Metal Profiled Sheet   | 92.38 | 98.99 |
+// |        Door-plastic       |  0.0  |  nan  |
+// |      Wood/timber Wall     | 53.05 | 53.32 |
+// |         Wood Frame        |  41.8 | 63.07 |
+// |     Metal Smooth Door     | 37.58 |  44.6 |
+// |    Concrete Window Sill   | 73.81 | 87.12 |
+// |    Metal Profiled Door    | 80.27 | 81.28 |
+// | Wood/Timber Profiled Door | 90.43 | 97.82 |
+// |          Unknown          |  nan  |  nan  |
+// |        Wood Ground        |  nan  |  nan  |
+// |        Plastic Vent       |  nan  |  nan  |
+// |      Wood/timber Vent     |  nan  |  nan  |
+// |         Whiteboard        |  nan  |  nan  |
+// |         Chessboard        |  nan  |  nan  |
+// |           Tripod          |  nan  |  nan  |
+// |        Metal-Frame        |  nan  |  nan  |
+// |       Miscellaneous       |  nan  |  nan  |
+// |         Metal-Vent        |  nan  |  nan  |
+// |   Metal Door Knob/Handle  |  nan  |  nan  |
+// |     Plastic Flyscreen     |  nan  |  nan  |
+// |       Plastic Label       |  nan  |  nan  |
+// |        Metal Label        |  nan  |  nan  |
+// |         Metal Pipe        |  nan  |  nan  |
+// |     Metal Smooth Sheet    |  nan  |  nan  |
+// |        Plastic Pipe       |  nan  |  nan  |
+// |         Metal-Pole        |  nan  |  nan  |
+// +---------------------------+-------+-------+
+// 07/24 06:52:09 - mmengine - INFO - Iter(val) [75/75]    aAcc: 89.5300  mIoU: 54.8900  mAcc: 69.0800  data_time: 0.0016  time: 0.0525

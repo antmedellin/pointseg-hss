@@ -185,6 +185,24 @@ CLASSES = (
         "Concrete Window Sill",
         "Metal Profiled Door",
         "Wood/Timber Profiled Door",
+        "Unknown", # added this and below
+        "Wood Ground",
+        "Plastic Vent",
+        "Wood/timber Vent",
+        "Whiteboard",
+        "Chessboard",
+        "Tripod",
+        "Metal-Frame",
+        "Miscellaneous",
+        "Metal-Vent",
+        "Metal Door Knob/Handle",
+        "Plastic Flyscreen",
+        "Plastic Label",
+        "Metal Label",
+        "Metal Pipe",
+        "Metal Smooth Sheet",
+        "Plastic Pipe",
+        "Metal-Pole"
     )
 
 def evaluate_experiment(exp_name: str, path: str):
