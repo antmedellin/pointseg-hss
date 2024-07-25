@@ -12,5 +12,5 @@ model_map = {
     'HybridSN': HybridSN,
     'RSSAN': RSSAN,
     'JigSawHSI': JigSawHSI,
-    'ResNet': resnet50
+    'ResNet': resnet50  ## gives error 
 }

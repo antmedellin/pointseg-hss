@@ -91,7 +91,7 @@
 
 // python3 hsi2-classify/train_libhsi.py --model CNN_HSI --data_root data/LIB-HSI --work_dir workdir/
 
-//  python3 hsi2-classify/train_libhsi.py --model CNN_HSI --data_root data/LIB-HSI --work_dir workdir/ --batch_size=2
+//  python3 hsi2-classify/train_libhsi.py --model TwoCNN --data_root data/LIB-HSI --work_dir workdir/ --batch_size=2 
 
 
 // Exp name: fcn_hr48_2xb2-20k_libhsi-512x512_20240724_050015
